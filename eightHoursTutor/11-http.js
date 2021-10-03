@@ -33,4 +33,5 @@ const server = http.createServer((req, res) => {
   }
 });
 
+// listen: ask event loop to keep listening for the incoming requests
 server.listen(5000);
