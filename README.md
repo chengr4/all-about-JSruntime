@@ -8,6 +8,7 @@
 + `path`
 + `fs`
 + `http`
++ `crypto`
 
 ### http
 
