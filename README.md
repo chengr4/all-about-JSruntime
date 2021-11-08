@@ -9,6 +9,7 @@
 + `fs`
 + `http`
 + `crypto`
++ `util`
 
 ### http
 
