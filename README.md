@@ -1,8 +1,8 @@
 # All About Node.js
 
-## Notes
+- Event-Driven Programming
 
-### Built-in Modules
+## Built-in Modules
 
 + `os`
 + `path`
@@ -10,14 +10,17 @@
 + `http`
 + `crypto`
 + `util`
++ `events`
 
-### http
+## http
 
-### Event Loop
+## events
+
+- Listener (`on`) should always be in front of emitter
+
+## Event Loop
 
 It allows Node.js to perform non-blocking I/O operations.
-
-
 
 ## References
 
