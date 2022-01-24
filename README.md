@@ -22,6 +22,10 @@
 
 - Listener (`on`) should always be in front of emitter
 
+## express
+
+`app.all()`: use all request (get, post, delete, put) => handle all http verbs
+
 ## Event Loop
 
 It allows Node.js to perform non-blocking I/O operations.
