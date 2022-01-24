@@ -26,6 +26,13 @@
 
 `app.all()`: use all request (get, post, delete, put) => handle all http verbs
 
+### API vs SSR
+
+| API | SSR |
+| --- | --- |
+| send data |  send template |
+| `res.json()` |  `res.render()` |
+
 ## Event Loop
 
 It allows Node.js to perform non-blocking I/O operations.
