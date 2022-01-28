@@ -26,6 +26,23 @@
 
 `app.all()`: use all request (get, post, delete, put) => handle all http verbs
 
+### Params
+
+```javascript
+app.get('/api/products/:productID', (req, res) => {
+  const { productID } = req.params
+})
+```
+
+### Query String
+
+```javascript
+app.get('/api/products/:productID', (req, res) => {
+  const { search, limit } = req.query
+})
+```
+
+
 ### API vs SSR
 
 | API | SSR |
@@ -45,5 +62,6 @@ It allows Node.js to perform non-blocking I/O operations.
 4. [Node.js - Event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#the-node-js-event-loop-timers-and-process-nexttick)
 5. [Bert Belder; Morning Keynote- Everything You Need to Know About Node.js Event Loop (2016.9)](https://youtu.be/PNa9OMajw9w)
 6. [The Node.js Event Loop](https://nodejs.dev/learn/the-nodejs-event-loop)
+7. [Express 4.x API](https://expressjs.com/en/api.html)
 
 [^1]: https://nodejs.org/docs/latest-v14.x/api/http.html#http_response_end_data_encoding_callback
