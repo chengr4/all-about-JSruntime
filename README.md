@@ -41,6 +41,10 @@ app.get('/api/products/:productID', (req, res) => {
   const { search, limit } = req.query
 })
 ```
+### Middleware
+
+> req => middleware => res
+
 
 
 ### API vs SSR
