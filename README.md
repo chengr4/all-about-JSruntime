@@ -1,5 +1,7 @@
 # All About Node.js
 
+Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine
+
 - Event-Driven Programming
 
 ## Built-in Modules
