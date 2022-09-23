@@ -47,8 +47,20 @@ app.get('/api/products/:productID', (req, res) => {
 
 > req => middleware => res
 
+- `next()`: the next piece of middleware inline is going to be run
+- able to access the request and response
 
-
+```javascript
+// manually write a middleware
+function logger(req, res, next) {
+  console.log('log');
+  next();
+}
+// add to global level
+// should always be as early as possible to declare
+app.use(logger);
+```
+  
 ### API vs SSR
 
 | API | SSR |
@@ -69,5 +81,6 @@ It allows Node.js to perform non-blocking I/O operations.
 5. [Bert Belder; Morning Keynote- Everything You Need to Know About Node.js Event Loop (2016.9)](https://youtu.be/PNa9OMajw9w)
 6. [The Node.js Event Loop](https://nodejs.dev/learn/the-nodejs-event-loop)
 7. [Express 4.x API](https://expressjs.com/en/api.html)
+8. [Learn Express Middleware In 14 Minutes (2020.03)](https://youtu.be/lY6icfhap2o)
 
 [^1]: https://nodejs.org/docs/latest-v14.x/api/http.html#http_response_end_data_encoding_callback
