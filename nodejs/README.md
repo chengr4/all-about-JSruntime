@@ -76,6 +76,16 @@ app.use(logger);
 
 It allows Node.js to perform non-blocking I/O operations.
 
+```mermaid
+flowchart LR
+  id1("make a request") --> id2("cross from JS to C++ (req goes to event loop)")
+  id2 --> id3("sync") --> id5("run in c++ code somewhere right then and there")
+  id2 --> id4("async") -->|able to be run C++ async primitive| id6("(eg http)")
+  id4 -->|unable| id7("thread pool(?)")
+  id7 -->|done| id8("go back to JS(from v8)")
+  id6 -->|done| id8
+```
+
 ## References
 
 1. [Node.js and Express.js - Full Course (2021.4)](https://youtu.be/Oe421EPjeBE)
@@ -86,5 +96,6 @@ It allows Node.js to perform non-blocking I/O operations.
 6. [The Node.js Event Loop](https://nodejs.dev/learn/the-nodejs-event-loop)
 7. [Express 4.x API](https://expressjs.com/en/api.html)
 8. [Learn Express Middleware In 14 Minutes (2020.03)](https://youtu.be/lY6icfhap2o)
+9. [The Node.js Event Loop: Not So Single Threaded (2017.10)](https://youtu.be/zphcsoSJMvM)
 
 [^1]: https://nodejs.org/docs/latest-v14.x/api/http.html#http_response_end_data_encoding_callback
